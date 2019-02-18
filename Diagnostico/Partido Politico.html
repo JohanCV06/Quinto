@@ -1,0 +1,69 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var Juan =parseInt(prompt('Introduzca la Cantidad de votos de Juan'));
+    var Pedro =parseInt(prompt('Introduzca la Cantidad de votos de Pedro'));
+    var Maria =parseInt(prompt('Introduzca la Cantidad de votos de Maria'));
+var Total= (Juan+Pedro+Maria)*(50/100);
+    if(Juan > Total){
+        document.write('Gano Juan');
+        
+    }
+    else
+		if(Pedro > Total){
+        document.write('Gano Pedro');
+        
+    }
+    else
+        if(Maria > Total){
+        document.write('Gano Maria');
+        
+    }
+    else
+        if(Juan < Maria && Juan < Pedro){
+            var M = Maria;
+            var M2 = Pedro;
+            if(M > M2){
+                document.write("Gano Maria la Segunda Ronda al final");
+            }
+            else
+            document.write("Gano Pedro la Segunda Ronda al final");
+        }
+    else
+        if(Maria < Juan && Maria < Pedro){
+            var M = Juan;
+            var M2 = Pedro;
+            if(M > M2){
+                document.write("Gano Juan la Segunda Ronda al final");
+            }
+            else
+            document.write("Gano Pedro la Segunda Ronda al final");
+            
+        }
+    else{
+            var M = Maria;
+            var M2 = Juan;
+        if(M > M2){
+                document.write("Gano Maria la Segunda Ronda al final");
+            }
+            else
+            document.write("Gano Juan la Segunda Ronda al final");
+    }
+    
+    
+            
+        
+    
+            
+        
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

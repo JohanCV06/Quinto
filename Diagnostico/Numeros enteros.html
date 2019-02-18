@@ -1,0 +1,42 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var Numero1 =parseInt(prompt('Introduzca un numero'));
+    var Numero2 =parseInt(prompt('Introduzca un segundo numero'));
+    var Numero3 =parseInt(prompt('Introduzca un tercer numero'));
+    
+    
+    if(Numero1 < 0){
+        Numero1=1000000000;
+    }
+    if(Numero2 < 0){
+        Numero3=100000000;
+    }
+    if(Numero3 < 0){
+        Numero3=10000000000;
+    }
+        if (Numero1 < Numero2 && Numero1 < Numero3){
+       var numeroMe= Numero1;
+        }
+else
+        if (Numero2 < Numero1 && Numero2 < Numero3){
+       var numeroMe= Numero2;
+        }
+    else
+ if (Numero3 < Numero1 && Numero3 < Numero2){
+       var numeroMe= Numero3;
+    }
+    
+    document.write(+numeroMe+ ' Es el numero Menor');
+		
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

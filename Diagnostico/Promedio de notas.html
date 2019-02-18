@@ -1,0 +1,62 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var Nota1 =parseInt(prompt('Hola, bienvenido al sistema de promedios del Colegio Cedes Don Bosco, Digite la Nota de la primera practica'));
+    var Nota2 =parseInt(prompt('Digite la Segunda Nota'));
+    var Nota3 =parseInt(prompt('Digite la Tercera Nota'));
+    var Nota4 =parseInt(prompt('Digite la Cuarta Nota'));
+    
+    if (Nota1 < Nota2 && Nota1 < Nota3 && Nota1 < Nota4){
+        var numeroM= Nota1;
+        var NotaB1= Nota2;
+        var NotaB2= Nota3;
+        var NotaB3= Nota4;
+	}
+    else
+         if (Nota2 < Nota1 && Nota2 < Nota3 && Nota2 < Nota4){
+        var numeroM= Nota2;
+             
+        var NotaB1= Nota1;
+        var NotaB2= Nota3;
+        var NotaB3= Nota4;
+        
+	}
+    else
+         if (Nota3 < Nota2 && Nota3 < Nota1 && Nota3 < Nota4){
+        var numeroM= Nota3;
+             
+        var NotaB1= Nota2;
+        var NotaB2= Nota1;
+        var NotaB3= Nota4;
+        
+	}
+    else
+         if (Nota4 < Nota2 && Nota4 < Nota3 && Nota4 < Nota1){
+        var numeroM= Nota4;
+        var NotaB1= Nota2;
+        var NotaB2= Nota3;
+        var NotaB3= Nota1;
+	}
+    
+    
+var Promedio= (NotaB1+NotaB2+NotaB3)/3;
+    
+    
+    
+
+    
+    document.write(' La nota menor y por ende eliminada es esta: '+numeroM+ '<br>');
+    
+    document.write(+Promedio+ ' Es el promedio de Notas' );
+
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

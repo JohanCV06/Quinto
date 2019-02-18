@@ -1,0 +1,36 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var Lado1 =parseInt(prompt('Introduzca el lado mayor del triangulo'));
+    var Lado2 =parseInt(prompt('Introduzca otro lado del triangulo'));
+    var Lado3 =parseInt(prompt('Introduzca el tercer lado del triangulo'));
+    if(Lado2+Lado3<Lado1){
+        document.write("No es un triangulo");}
+        else
+	if (Lado1 == Lado2 && Lado2 == Lado3){
+        document.write("El triagulo es EQUILATERO");
+        
+	}
+	else
+        if (Lado1 == Lado2 || Lado1 == Lado3 || Lado2 == Lado3){
+            document.write("El triagulo es Isoceles");
+            
+        }
+    else
+        if (Lado1 != Lado2 || Lado1 != Lado3 || Lado2 != Lado3){
+            document.write("El triagulo es Escaleno");
+            
+        }
+        
+		
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+E:\Quinto\C#\Cine OO\Cine OO\bin\Debug\Cine OO.exe.config
+E:\Quinto\C#\Cine OO\Cine OO\obj\Debug\Cine OO.csprojResolveAssemblyReference.cache
+E:\Quinto\C#\Cine OO\Cine OO\obj\Debug\Cine_OO.Form1.resources
+E:\Quinto\C#\Cine OO\Cine OO\obj\Debug\Cine_OO.Properties.Resources.resources
+E:\Quinto\C#\Cine OO\Cine OO\obj\Debug\Cine OO.csproj.GenerateResource.Cache
+E:\Quinto\C#\Cine OO\Cine OO\bin\Debug\Cine OO.exe
+E:\Quinto\C#\Cine OO\Cine OO\bin\Debug\Cine OO.pdb
+E:\Quinto\C#\Cine OO\Cine OO\obj\Debug\Cine OO.exe
+E:\Quinto\C#\Cine OO\Cine OO\obj\Debug\Cine OO.pdb

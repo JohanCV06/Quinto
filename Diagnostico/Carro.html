@@ -1,0 +1,38 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var Numerokm =parseInt(prompt('Hola, bienvenido al alquiler de autos, los primeros 300 km cuentan 30 dolares, y 0.15 dolares por cada km en exceso, ademas de 0.10 cada exceso a partir de los 1000 km, Cuantos km desea Alquilar?'));
+
+	if (Numerokm < 300){
+        var Precio=30;
+       
+        
+	}
+	else
+        if (Numerokm > 300 && Numerokm < 1000){
+            var Precio = 30+((Numerokm-300)*0.15);
+        }
+    else
+        if (Numerokm > 1000 ){
+            var Precio = 30+((Numerokm-300)*0.10);
+        }
+
+ var MontoImpuesto= Precio*(18/100);
+    var PrecioFinal= Precio-MontoImpuesto;
+    
+    document.write(+Precio+' Es el monto a pagar <br>');
+    
+    document.write(+MontoImpuesto+' Es el monto agregado del impuesto <br>')
+    
+		
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

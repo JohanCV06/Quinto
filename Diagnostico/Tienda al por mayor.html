@@ -1,0 +1,45 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var NumeroDocenas =parseInt(prompt('Hola, Bienvenido a nuestra tienda al por mayor, las docenas de productos cuestan 12500 Colones cada una, ¿Cuantas docenas desea comprar?'));
+    
+    if(NumeroDocenas >= 3){
+    var NumeroObsequio=NumeroDocenas-2;
+    }
+    
+    var PrecioSinD = NumeroDocenas*12500;
+
+	if (NumeroDocenas > 3){
+        var MontoDescuento= PrecioSinD*(15/100);
+       
+        
+	}
+	else
+    {
+        
+            var MontoDescuento= PrecioSinD*(10/100);
+    }
+        
+   
+
+ var MontoTotal= PrecioSinD-MontoDescuento;
+    
+    document.write(+PrecioSinD+' Es el monto sin descuento <br>');
+    
+    document.write(MontoDescuento+ ' Es el monto del descuento <br>')
+    
+    document.write(+NumeroObsequio+ ' Es el numero de obsequios <br>')
+    
+    document.write(+MontoTotal+ ' Es el monto total a pagar');
+		
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

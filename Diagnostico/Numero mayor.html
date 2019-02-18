@@ -1,0 +1,110 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+    var Centena, Decena, Unidad;
+    
+	var NumeroIngresado =parseInt(prompt('Ingrese un numero'));
+    
+    Centena= Math.floor(NumeroIngresado/100);
+    Decena= Math.floor((NumeroIngresado%100)/10);
+    Unidad= Math.floor((NumeroIngresado%100)%10);
+    if(NumeroIngresado > 0){
+
+    
+            if (Centena > Decena && Centena > Unidad){
+        var numeroM= Centena;
+        
+	}
+	else
+        if (Centena < Decena && Centena < Unidad){
+       var numeroMe= Centena;
+    }
+    else
+        var numeroMed = Centena;
+    if (Decena > Centena && Decena > Unidad){
+        var numeroM= Decena;
+        
+	}
+	else
+        if (Decena < Centena && Decena < Unidad){
+       var numeroMe= Decena;
+    }
+    else
+        var numeroMed = Decena;
+    if (Unidad > Decena && Unidad > Centena){
+        var numeroM= Unidad;
+        
+	}
+	else if (Unidad < Centena && Unidad < Decena){
+       var numeroMe= Unidad;
+    }
+    else
+        var numeroMed = Unidad;
+        
+    
+    document.write(numeroM);
+    
+    document.write(numeroMed);
+    
+    document.write(numeroMe);
+    }
+    else
+        if(NumeroIngresado < 0) { 
+            NumeroIngresado=NumeroIngresado*-1;
+            Centena= Math.floor(NumeroIngresado/100);
+    Decena= Math.floor((NumeroIngresado%100)/10);
+    Unidad= Math.floor((NumeroIngresado%100)%10);
+
+    
+            if (Centena > Decena && Centena > Unidad){
+        var numeroM= Centena;
+        
+	}
+	else
+        if (Centena < Decena && Centena < Unidad){
+       var numeroMe= Centena;
+    }
+    else
+        var numeroMed = Centena;
+    if (Decena > Centena && Decena > Unidad){
+        var numeroM= Decena;
+        
+	}
+	else
+        if (Decena < Centena && Decena < Unidad){
+       var numeroMe= Decena;
+    }
+    else
+        var numeroMed = Decena;
+    if (Unidad > Decena && Unidad > Centena){
+        var numeroM= Unidad;
+        
+	}
+	else if (Unidad < Centena && Unidad < Decena){
+       var numeroMe= Unidad;
+    }
+    else
+        var numeroMed = Unidad;
+            
+          
+            
+
+    document.write("-"+numeroMe);
+    
+    document.write(numeroMed);
+    
+    document.write(numeroM);
+    }
+        
+    
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

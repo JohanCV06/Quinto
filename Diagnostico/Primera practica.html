@@ -1,0 +1,53 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var Numero1 =parseInt(prompt('Introduzca un numero'));
+    var Numero2 =parseInt(prompt('Introduzca un segundo numero'));
+    var Numero3 =parseInt(prompt('Introduzca un tercer numero'));
+	if (Numero1 > Numero2 && Numero1 > Numero3){
+        var numeroM= Numero1;
+        
+	}
+	else
+        if (Numero1 < Numero2 && Numero1 < Numero3){
+       var numeroMe= Numero1;
+    }
+    else
+        var numeroMed = Numero1;
+    if (Numero2 > Numero1 && Numero2 > Numero3){
+        var numeroM= Numero2;
+        
+	}
+	else
+        if (Numero2 < Numero1 && Numero2 < Numero3){
+       var numeroMe= Numero2;
+    }
+    else
+        var numeroMed = Numero2;
+    if (Numero3 > Numero2 && Numero3 > Numero1){
+        var numeroM= Numero3;
+        
+	}
+	else if (Numero3 < Numero1 && Numero3 < Numero2){
+       var numeroMe= Numero3;
+    }
+    else
+        var numeroMed = Numero3;
+    
+    document.write(+numeroM+' Es el numero Mayor <br>');
+    
+    document.write(+numeroMed+ 'Es el numero del medio <br>')
+    
+    document.write(+numeroMe+ ' Es el numero Menor');
+		
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TeatroTico</title>
+        <link rel="stylesheet" type="text/css" href="js/bootstrap-4.0.0-dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/calendario.css">
+    </head>
+    <body onload='ajax()'>
+        <div id='fullDiv' >
+        
+            <ul>
+                <br>
+                <br>
+                <br>
+                    <table>
+            <tr>
+                <td><div class="arrowleft" onclick="atras()" ></div></td>
+                <td><h1 id="mes"></h1></td>
+                <td><div class="arrowright" onclick="adelante()" ></div> </td>
+                </tr>
+            </table>    
+                <label id="calendario"></label>
+                
+                <br>
+                <br>
+                <br>
+            </ul>
+
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Nuestras ofertas:</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <label id="labelModal">hola</label>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </body>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</html>

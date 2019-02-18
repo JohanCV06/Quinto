@@ -1,0 +1,37 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var i=0;
+    var a=0;
+    var b=0;
+    var c=0;
+    var NumeroMenor=parseInt(prompt('Introduzca un numero'));
+     var NumeroMayor=parseInt(prompt('Introduzca un numero mayo al anterior'));
+
+	for (i=NumeroMenor; i<=NumeroMayor;i++){
+        document.write(i+"<br>");
+        a=a+1;
+        if(i%2==0){
+            b++;
+        }
+        if(i%2!=0){
+            c=c+i;
+            
+        }
+        
+    }
+    document.write("Hay "+a+" Numeros Naturales entre "+NumeroMenor+ " y "+NumeroMayor+ "<br>");
+    document.write("Hay "+b+" Numeros pares entre "+NumeroMenor+ " y "+NumeroMayor+ "<br>");
+    document.write("Hay "+c+" es la suma de los impares entre "+NumeroMenor+ " y "+NumeroMayor+ "<br>");
+
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

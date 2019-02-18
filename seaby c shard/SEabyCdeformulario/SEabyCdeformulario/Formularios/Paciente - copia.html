@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Formulario Paciente</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/jquery-ui.css">				
+			<link rel="stylesheet" href="css/nice-select.css">							
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">			
+			<link rel="stylesheet" href="css/jquery-ui.css">			<link rel="stylesheet" href="css/stylepop.css">
+			<link rel="stylesheet" href="css/main1.css">
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+			<script  src="js/index.js"></script>
+			<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style1.css">
+			
+		</head>
+		<body>	
+		  <header id="header">
+	  		<div class="header-top">
+	  			<div class="container">
+			  		<div class="row align-items-center">
+			  			<div class="col-lg-6 col-sm-6 col-4 header-top-left">			
+			  			</div>
+			  			<div class="col-lg-6 col-sm-6 col-8 header-top-right">
+			  			</div>
+			  		</div>			  					
+	  			</div>
+			</div>
+		    <div class="container main-menu">
+		    	<div class="row align-items-center justify-content-between d-flex">
+			      <div id="logo">
+			        <a href="index.html"><img src="img/logoseaby.png" width="60" height="50" alt="" title="" /><img src="img/texto.png" width="80" height="50"></a>
+			      </div>
+			      <nav id="nav-menu-container">
+			        <ul class="nav-menu">
+			          <li><a href="index.html">Inicio</a></li>
+			          <li><a href="index.html#quienes">¿Quiénes somos?</a></li>
+			          <li><a href="index.html#problemas">Problemática</a></li>
+			          <li><a href="index.html#importancia">Importancia</a></li>
+			          <li><a href="index.html#acerca">Acerca de Seaby</a></li>
+			          <li><a href="analisis.html">Análisis de datos</a></li>
+			          <li><a href="index.html#busqueda">Búsqueda</a></li>				          					          		          
+			          <li><a href="index.html#contacto">Contacto</a></li>
+			        </ul>
+			      </nav><!-- #nav-menu-container -->		    		
+		    	</div>
+		    </div>
+		  </header><!-- #header -->
+
+<div class="container"><br><br><br><br>
+  <form>
+    <div class="row">
+      <h4>Paciente</h4>
+        <div class="input-group input-group-icon">
+            <input type="text" placeholder="ID Paciente" id="IDPACIENTE"/>
+            <div class="input-icon"><i class="far fa-id-card"></i></div>
+        </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Nombre completo" id="NOMBRE"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Medicación" id="MEDICACION"/>
+        <div class="input-icon"><i class="fas fa-pills"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Alergias" id="ALERGIAS"/>
+        <div class="input-icon"><i class="fas fa-allergies"></i></div>
+      </div>
+        <div class="input-group input-group-icon">
+        <input type="text" placeholder="Vicios" id="VICIOS"/>
+        <div class="input-icon"><i class="fas fa-smoking"></i></div>
+      </div>
+    </div>
+      <div class="row">
+          <div class="col-half">
+              <h4>Centro Médico</h4>
+              <div class="input-group">
+                  <select id="CENTROMEDICO">
+                      <option selected="">Seleccione Centro Médico</option>
+
+                  </select>
+              </div>
+          </div>
+          <div class="col-half">
+              <h4>Médico</h4>
+              <div class="input-group">
+                  <select id="MEDICO">
+                      <option selected="">Seleccione Médico</option>
+
+                  </select>
+              </div>
+          </div>
+      </div>
+    <div class="row">
+    <div class="col-half">
+        <h4>Padecimiento</h4>
+        <br>
+        <button class="padecimientos" type="button" data-js="open">Seleccionar<br></button>
+        <div class="popup">
+            <h2>Seleccione los padecimientos</h2><br><br>
+            <div class="padecimientos" id="ENRFER">
+
+                <button name="close" type="button">Guardar</button>
+            </div>
+        </div>
+            
+        
+      </div>
+      <div class="col-half">
+        <h4>Género</h4>
+          <div class="input-group" id="GENERO">
+              <input type="radio" name="gender" value="1" id="gender-male" class="GENERO" />
+              <label for="gender-male">Hombre</label>
+              <input type="radio" name="gender" value="0" id="gender-female" class="GENERO" />
+              <label for="gender-female">Mujer</label>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-half">
+        <h4>Estatura</h4>
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="cm" id="ESTATURA"/>
+          <div class="input-icon"><i class="fas fa-male"></i></div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Edad</h4>
+        <div class="input-group">
+            <select id="EDAD">
+                <option selected="">Seleccione su edad</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+                <option value="60">60</option>
+                <option value="61">61</option>
+                <option value="62">62</option>
+                <option value="63">63</option>
+                <option value="64">64</option>
+                <option value="65">65</option>
+            </select>
+        </div>
+      </div>
+    </div>
+      
+    <div class="row">
+      <div class="col-half">
+        <h4>Peso</h4>
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="kg" id="PESO"/>
+          <div class="input-icon"><i class="fa fa-weight"></i></div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Tipo de sangre</h4>
+        <div class="row">
+            <select id="SANGRE">
+                <option selected="">Seleccione su tipo</option>
+                <option value="O+">O +</option>
+                <option value="O-">O -</option>
+                <option value="A+">A +</option>
+                <option value="A-">A -</option>
+                <option value="B+">B +</option>
+                <option value="B-">B -</option>
+                <option value="AB+">AB +</option>
+                <option value="AB-">AB -</option>
+            </select>
+        </div>
+      </div>
+    </div>
+<div class="row">
+      <div class="input-group">
+       
+    <br>         
+          <input type="button" value="Siguiente" onclick="Ingresarpaciente()" />
+      </div>
+    </div>
+  </form>
+</div>
+
+            <script type="text/javascript">
+                var enfermedades = [];
+                var persona = new Object();
+                persona.op = 'listar'
+                var pacientes;
+                $.ajax({
+                    url: 'http://localhost:2209/api/Medico',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: persona,
+                    success: function (data, textStatus, xhr) {
+                        pacientes = data;
+                        for (var ele in data) {
+                            document.getElementById("MEDICO").innerHTML += '<option value= "' + data[ele]._IDMEDICO + '">' + data[ele]._NOMBRE + '</option>';
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(xhr);
+                    }
+                });
+                  $.ajax({
+                    url: 'http://localhost:2209/api/Institucion',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: persona,
+                    success: function (data, textStatus, xhr) {
+                        pacientes = data;
+                        for (var ele in data) {
+                            document.getElementById("CENTROMEDICO").innerHTML += '<option value= "' + data[ele]._IDINSTITUCION + '">' + data[ele]._NOMBRE + '</option>';
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(xhr);
+                    }
+                  });
+                  var persona = new Object();
+                  persona.op = 'listar'
+                  var pacientes;
+                  $.ajax({
+                      url: 'http://localhost:2209/api/Enfermedad',
+                      type: 'POST',
+                      dataType: 'json',
+                      data: persona,
+                      success: function (data, textStatus, xhr) {
+                          pacientes = data;
+                          for (var ele in data) {
+                              document.getElementById("ENRFER").innerHTML += "<div class='input-group'> <input type='checkbox' id='" + data[ele]._IDENFERMEDAD + "' onchange=agregarenfermedadalvector('" + data[ele]._IDENFERMEDAD + "')> <label for='" + data[ele]._IDENFERMEDAD + "' style='font-size: 20px'>" + data[ele]._NOMBRE + "</label> </div><br><br> ";
+                          }
+                      },
+                      error: function (xhr, textStatus, errorThrown) {
+                          alert(xhr);
+                      }
+                  });
+                function Ingresarpaciente() {
+                    var persona = new Object();
+                    persona._IDPACIENTE = document.getElementById("IDPACIENTE").value;
+                    persona._IDMEDICO = document.getElementById("MEDICO").value;
+                    persona._IDINSTITUCION = document.getElementById("CENTROMEDICO").value;
+                    persona._NOMBRE = document.getElementById("NOMBRE").value;
+                    persona._EDAD = document.getElementById("EDAD").value;
+                    persona._PESO = document.getElementById("PESO").value;
+                    persona._ESTATURA = document.getElementById("ESTATURA").value;
+                    persona._SANGRE = document.getElementById("SANGRE").value;
+                    persona._VICIOS = document.getElementById("VICIOS").value;
+                    persona._MEDICACION = document.getElementById("MEDICACION").value;
+                    persona._ALERGIAS = document.getElementById("ALERGIAS").value;
+                    persona._PADECIMIENTOS = "";
+                    persona._LISTADEPADECIMIENTOS = JSON.stringify(enfermedades);
+                    persona._GENERO = $('input[name=gender]:checked', '#GENERO').val();
+                    persona.op = 'insertar';
+                    var tabla;
+
+                    $.ajax({
+                        url: 'http://localhost:2209/api/Paciente',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: persona,
+                        success: function (data, textStatus, xhr) {
+                            alert("Item guardado correctamente");
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            alert(xhr);
+                        }
+                    });
+                   
+                }
+               
+                function agregarenfermedadalvector(id)
+                {
+                    enfermedades.push(id);
+                }
+
+            </script>
+                <script src='http://misoftlife.com/wp-content/formulario_trial/jquery.min.js'></script>	
+
+			<!-- End footer Area -->
+
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+ 			<script src="js/jquery-ui.js"></script>					
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+    		<script src="js/jquery.tabs.min.js"></script>						
+			<script src="js/jquery.nice-select.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>									
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+              <script  src="js/indexpop.js"></script>
+            
+		</body>
+	</html>

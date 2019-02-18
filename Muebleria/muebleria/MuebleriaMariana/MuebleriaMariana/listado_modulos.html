@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Listado de Modulo</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+    <link rel="stylesheet" type="text/css" href="listado.css" />
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body onload="CARGAR()">
+    <div id="contenedor3">
+        <h1>Listado</h1>
+        <table id="listado_modulo">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Ancho</th>
+                    <th scope="col">Alto</th>
+                    <th scope="col">Fondo</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Modificar</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Agregar comp</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+
+        function CARGAR() {
+            var persona = new Object();
+            persona.op = "listar";
+            $.ajax({
+                url: 'api/Modulo',
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    if (data.length > 0) {
+
+                        for (var ele in data) {
+
+                            var tableRef = document.getElementById('listado_modulo').getElementsByTagName('tbody')[0];
+
+                            var newRow = tableRef.insertRow(tableRef.rows.length);
+
+                            var newCell3 = newRow.insertCell(0);
+
+                            var newText3 = document.createTextNode(data[ele]._Id_modulo);
+                            newCell3.appendChild(newText3);
+
+                            var newCell3 = newRow.insertCell(1);
+
+                            var newText3 = document.createTextNode(data[ele]._Nombre_modulo);
+                            newCell3.appendChild(newText3);
+
+                            var newCell4 = newRow.insertCell(2);
+
+                            var newText4 = document.createTextNode(data[ele]._Ancho);
+                            newCell4.appendChild(newText4);
+
+                            var newCell4 = newRow.insertCell(3);
+
+                            var newText4 = document.createTextNode(data[ele]._Alto);
+                            newCell4.appendChild(newText4);
+
+                            var newCell4 = newRow.insertCell(4);
+
+                            var newText4 = document.createTextNode(data[ele]._Fondo);
+                            newCell4.appendChild(newText4);
+
+                            var newCell4 = newRow.insertCell(5);
+
+                            var newText4 = document.createTextNode(data[ele]._Tipo_modulo);
+                            newCell4.appendChild(newText4);
+
+                            var newCell4 = newRow.insertCell(6);
+
+                            var newText4 = document.createTextNode(data[ele]._Precio_modulo);
+                            newCell4.appendChild(newText4);
+
+                            var btnFORZAR = document.createElement("img");
+                            //btnmodifica.type = "button";
+
+                            btnFORZAR.setAttribute("src", data[ele]._Foto1_modulo + data[ele]._Foto2_modulo);
+                            btnFORZAR.setAttribute("style", "width:25px;height:25px;cursor: pointer;");
+                            btnFORZAR.setAttribute("onclick", "modifica('" + data[ele]._Id_modulo + "')");
+                            btnFORZAR.id = 'botonmod' + data[ele]._Id_modulo;
+                            btnFORZAR.value = "Presióname";
+
+                            var newCell10 = newRow.insertCell(7);
+
+                            newCell10.appendChild(btnFORZAR);
+
+
+                            var btnModificar = document.createElement("input");
+                            //btnmodifica.type = "button";
+
+                            btnModificar.setAttribute("type", "button");
+                            btnModificar.setAttribute("value", "Modificar");
+                            btnModificar.setAttribute("onclick", "Modificarmodulo('" + data[ele]._Id_modulo + "')");
+                            btnModificar.id = 'botonmod' + data[ele]._Id_modulo;
+                            //btnModificar.value = "Modificar";
+
+                            var newCell11 = newRow.insertCell(8);
+
+                            newCell11.appendChild(btnModificar);
+
+
+                            var btnEliminar = document.createElement("input");
+                            //btnmodifica.type = "button";
+
+                            btnEliminar.setAttribute("type", "button");
+                            btnEliminar.setAttribute("value", "Eliminar");
+                            btnEliminar.setAttribute("onclick", "Eliminarmodulo('" + data[ele]._Id_modulo + "')");
+                            btnEliminar.id = 'botonmod' + data[ele]._Id_modulo;
+                            //btnModificar.value = "Eliminar";
+
+                            var newCell12 = newRow.insertCell(9);
+
+                            newCell12.appendChild(btnEliminar);
+
+
+                            var btnAgregar = document.createElement("input");
+
+
+                            btnAgregar.setAttribute("type", "button");
+                            btnAgregar.setAttribute("value", "Agregar");
+                            btnAgregar.setAttribute("onclick", "Agregarcomponente('" + data[ele]._Id_modulo + "')");
+                            btnAgregar.id = 'botonmod' + data[ele]._Id_modulo;
+
+
+                            var newCell12 = newRow.insertCell(10);
+
+                            newCell12.appendChild(btnAgregar);
+                        }
+                    }
+                    else {
+                        alert("error");
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+
+        function Eliminarmodulo(_Id_modulo) {
+            var persona = new Object();
+            persona.identificacion = '0';
+            persona._Id_modulo = _Id_modulo;
+            persona.op = 'eliminar';
+            var tabla;
+
+            $.ajax({
+                url: 'api/Modulo',
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    alert("Item eliminado");
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+        function Agregarcomponente(_Id_modulo) {
+            localStorage.setItem("idguardado", _Id_modulo);
+            window.open("listadocomponentesdemod.html");
+        }
+    </script>
+</body>
+</html>

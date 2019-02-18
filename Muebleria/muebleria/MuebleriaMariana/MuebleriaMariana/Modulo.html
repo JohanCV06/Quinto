@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Formulario Modulo</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id="contenedor">
+        <h1 style="text-align:center">Módulo</h1>
+            <input type="text" placeholder="Identificador" id="id_modulo">
+            <input type="text" placeholder="Nombre" id="nombre_modulo">
+            <input type="text" placeholder="Alto" id="alto">
+            <input type="text" placeholder="Ancho" id="ancho">
+            <input type="text" placeholder="Fondo" id="fondo">
+            <input type="text" placeholder="Tipo" id="tipo_modulo">
+            <input type="text" placeholder="Precio" id="precio_modulo">
+            <input type="file" placeholder="Foto" class="archivo" id="foto">
+            <button class="button" onclick="Ingresarmodulo()">Ingresar</button>
+            
+            <button class="button" onclick="Listado()">Lista de modulos</button>
+        <button class="button" OnClick="location.href='menu.html' ">Volver al menu</button>
+    </div>
+    <script type="text/javascript">
+        var imagenentextoparte1 = "";
+        var imagenentextoparte2 = "";
+
+        $("#foto").change(function () {
+            readURL(this);
+        });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+
+                    var tamanno = e.target.result.length;//RECUPERO EL TAMANNO TOTAL DEL TEXTO BASE 64 DE LA IMAGEN SUBIDA
+                    var mitad = Math.round(tamanno / 2);//SACO LA MITAD DEL TAMANNO TOTAL, REDONDEANDOLO PARA QUE ME DE UN NUMERO ENTERO
+
+                    imagenentextoparte1 = e.target.result.substring(0, mitad);//EN LA PRIMERA PARTE DE LA IMAGEN EN TEXTO, EN LA VARIABLE GLOBAL, ALMACENO EL TEXTO HASTA LA MITAD
+                    imagenentextoparte2 = e.target.result.substring(mitad, tamanno);//EN LA SEGUNDA PARTE, ALMACENO DE LA MITAD HASTA EL FINAL DEL TEXTO DE LA IMAGEN
+
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        function Ingresarmodulo() {
+            var persona = new Object();
+            persona.identificacion = '0';
+            persona._Id_modulo = document.getElementById("id_modulo").value;
+            persona._Nombre_modulo = document.getElementById("nombre_modulo").value;
+            persona._Alto = document.getElementById("alto").value;
+            persona._Ancho = document.getElementById("ancho").value;
+            persona._Fondo = document.getElementById("fondo").value;
+            persona._Tipo_modulo = document.getElementById("tipo_modulo").value;
+            persona._Precio_modulo = document.getElementById("precio_modulo").value;
+            persona._Foto1_modulo = imagenentextoparte1;
+            persona._Foto2_modulo = imagenentextoparte2;
+            persona.op = 'insertar';
+            var tabla;
+            $.ajax({
+                url: 'api/Modulo',
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    alert("Item guardado correctamente");
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+        function Modificarmodulo() {
+            var persona = new Object();
+            persona.identificacion = '0';
+            persona._Id_modulo = document.getElementById("id_modulo").value;
+            persona._Nombre_modulo = document.getElementById("nombre_modulo").value;
+            persona._Alto = document.getElementById("alto").value;
+            persona._Ancho = document.getElementById("ancho").value;
+            persona._Fondo = document.getElementById("fondo").value;
+            persona._Tipo_modulo = document.getElementById("tipo_modulo").value;
+            persona._Precio_modulo = document.getElementById("precio_modulo").value;
+            persona._Foto1_modulo = imagenentextoparte1;
+            persona._Foto2_modulo = imagenentextoparte2;
+            persona.op = 'modificar';
+            var tabla;
+            $.ajax({
+                url: 'api/Modulo',
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    alert("Item modificado correctamente");
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+        function Listado() {
+            window.open("listado_modulos.html");
+        }
+    </script>
+</body>
+</html>

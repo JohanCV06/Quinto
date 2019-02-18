@@ -1,0 +1,95 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+    //Aqui se definen las variables
+	var i=0;
+    var a=-10000000000;
+    var b=0;
+    var Vector = new Array(9); //Aqui se define el vector a usar con nueve espacios de parametro
+    //Se Dan valores al vector
+    var Numero1=parseInt(prompt('Introduzca un 1 numero'));
+    var Numero2=parseInt(prompt('Introduzca un 2  numero'));
+    var Numero3=parseInt(prompt('Introduzca un 3 numero'));
+    var Numero4=parseInt(prompt('Introduzca un 4 numero'));
+    var Numero5=parseInt(prompt('Introduzca un 5 numero'));
+    var Numero6=parseInt(prompt('Introduzca un 6 numero'));
+    var Numero7=parseInt(prompt('Introduzca un 7 numero'));
+    var Numero8=parseInt(prompt('Introduzca un 8 numero'));
+    var Numero9=parseInt(prompt('Introduzca un 9 numero'));
+    var Numero10=parseInt(prompt('Introduzca un 10 numero'));
+    Vector[0]=Numero1;
+    Vector[1]=Numero2;
+    Vector[2]=Numero3;
+    Vector[3]=Numero4;
+    Vector[4]=Numero5;
+    Vector[5]=Numero6;
+    Vector[6]=Numero7;
+    Vector[7]=Numero8;
+    Vector[8]=Numero9;
+    Vector[9]=Numero10;
+    //se Coloca el mensaje que originara el resultado del vecto con su dicha operacion
+var msg ='El array original es: ' + Vector +'<br>';
+
+    //Aqui se llama a la funciona que servira para establecer los numeros y ordenarlos de menor a mayro
+msg = msg + 'Ordenado de menor a mayor es ' + Vector.sort(deMenorAMayor)+'<br>';
+document.write(msg);
+
+function deMenorAMayor(elem1, elem2) {return elem1-elem2;}//Esta es la funcion que compara el menor y el mayor y los acomoda en ese orden
+    
+
+        
+
+    
+function Buscar(){//Aqui se llama a la funcion que buscara al numero deseado
+    
+    var n1= parseInt(document.getElementById('n2').value);
+    if(n1<=Vector[4]){
+        
+    var x=false
+    for(i=0;i<=4;i++){
+        if(n1==Vector[i]){
+            x=true;
+        }
+    }
+    if(x){//Aqui es la funcion de condicion para ver si llama o no al numero
+        document.write("<br>"+n1+" Es un numero que se encuentra en el arreglo");
+        
+}
+    else
+        document.write("<br>"+n1+" NO Es un numero que se encuentra en el arreglo");
+}
+    else
+        if(n1>Vector[4]){
+        
+    var x=false
+    for(i=5;i<=9;i++){
+        if(n1==Vector[i]){
+            x=true;
+        }
+    }
+    if(x){//Aqui es la funcion de condicion para ver si llama o no al numero
+        document.write("<br>"+n1+" Es un numero que se encuentra en el arreglo");
+        
+}
+    else
+        document.write("<br>"+n1+" NO Es un numero que se encuentra en el arreglo");
+}
+}
+    
+
+
+	</script>
+
+</head>
+
+<body>
+    <input type="text" id="n2"></input>
+    <br>
+    <input type="button" value="Ejecutar" onclick="Buscar()"></input>
+    
+
+</body>
+</html>

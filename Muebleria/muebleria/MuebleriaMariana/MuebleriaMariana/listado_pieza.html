@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Listado de Pieza</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+    <link rel="stylesheet" type="text/css" href="listado.css" />
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body onload="CARGAR()">
+    <div id="contenedor2">
+        <h1>Listado</h1>
+        <table id="listado_piezas">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Unidad de medida</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col"></th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+
+        function CARGAR() {
+            var persona = new Object();
+            persona.op = "listar";
+            $.ajax({
+                url: 'api/Pieza',
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    if (data.length > 0) {
+
+                        for (var ele in data) {
+
+                            var tableRef = document.getElementById('listado_piezas').getElementsByTagName('tbody')[0];
+
+                            var newRow = tableRef.insertRow(tableRef.rows.length);
+
+                            var newCell3 = newRow.insertCell(0);
+
+                            var newText3 = document.createTextNode(data[ele]._id_pieza);
+                            newCell3.appendChild(newText3);
+
+                            var newCell3 = newRow.insertCell(1);
+
+                            var newText3 = document.createTextNode(data[ele]._Nombre_pieza);
+                            newCell3.appendChild(newText3);
+
+                            var newCell4 = newRow.insertCell(2);
+
+                            var newText4 = document.createTextNode(data[ele]._Descripcion);
+                            newCell4.appendChild(newText4);
+
+                            var newCell4 = newRow.insertCell(3);
+
+                            var newText4 = document.createTextNode(data[ele]._Precio_pieza);
+                            newCell4.appendChild(newText4);
+
+                            var newCell4 = newRow.insertCell(4);
+
+                            var newText4 = document.createTextNode(data[ele]._Unidad_medida);
+                            newCell4.appendChild(newText4);
+
+                            var btnFORZAR = document.createElement("img");
+                            //btnmodifica.type = "button";
+
+                            btnFORZAR.setAttribute("src", data[ele]._Foto1_pieza + data[ele]._Foto2_pieza);
+                            btnFORZAR.setAttribute("style", "width:50px;height:50px;cursor: pointer;");
+                            btnFORZAR.setAttribute("onclick", "modifica('" + data[ele]._id_pieza + "')");
+                            btnFORZAR.id = 'botonmod' + data[ele]._id_pieza;
+                            btnFORZAR.value = "Presióname";
+
+                            var newCell10 = newRow.insertCell(5);
+
+                            newCell10.appendChild(btnFORZAR);
+
+
+                            var btnModificar = document.createElement("input");
+                            //btnmodifica.type = "button";
+
+                            btnModificar.setAttribute("type", "button");
+                            btnModificar.setAttribute("value", "Modificar");
+                            btnModificar.setAttribute("onclick", "Modificarpieza('" + data[ele]._id_pieza + "')");
+                            btnModificar.id = 'botonmod' + data[ele]._id_pieza;
+                            //btnModificar.value = "Modificar";
+
+                            var newCell11 = newRow.insertCell(6);
+
+                            //newCell11.appendChild(btnModificar);
+
+
+                            var btnEliminar = document.createElement("input");
+                            //btnmodifica.type = "button";
+
+                            btnEliminar.setAttribute("type", "button");
+                            btnEliminar.setAttribute("value", "Eliminar");
+                            btnEliminar.setAttribute("onclick", "Eliminarpieza('" + data[ele]._id_pieza + "')");
+                            btnEliminar.id = 'botonmod' + data[ele]._id_pieza;
+                            //btnModificar.value = "Eliminar";
+
+                            var newCell12 = newRow.insertCell(7);
+
+                            newCell12.appendChild(btnEliminar);
+                        }
+                    }
+                    else {
+                        alert("error");
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+
+        function Eliminarpieza(_id_pieza) {
+            var persona = new Object();
+            persona.identificacion = '0';
+            persona._id_pieza = _id_pieza;
+            persona.op = 'eliminar';
+            var tabla;
+
+            $.ajax({
+                url: 'api/Pieza',
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    alert("Item eliminado");
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

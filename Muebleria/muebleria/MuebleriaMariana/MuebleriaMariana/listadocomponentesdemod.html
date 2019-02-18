@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Listado de Componentes</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+    <link rel="stylesheet" type="text/css" href="listado.css" />
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body onload="CARGAR()">
+    <div id="contenedor2">
+        <h1>Listado</h1>
+        <table id="listado_componente">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Agregar</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+
+        function CARGAR() {
+            var persona = new Object();
+            persona.op = "listar";
+            $.ajax({
+                url: 'api/Componente',
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    if (data.length > 0) {
+
+                        for (var ele in data) {
+
+                            var tableRef = document.getElementById('listado_componente').getElementsByTagName('tbody')[0];
+
+                            var newRow = tableRef.insertRow(tableRef.rows.length);
+
+                            var newCell3 = newRow.insertCell(0);
+
+                            var newText3 = document.createTextNode(data[ele]._Id_componente);
+                            newCell3.appendChild(newText3);
+
+                            var newCell3 = newRow.insertCell(1);
+
+                            var newText3 = document.createTextNode(data[ele]._Nombre_componente);
+                            newCell3.appendChild(newText3);
+
+                            var newCell4 = newRow.insertCell(2);
+
+                            var newText4 = document.createTextNode(data[ele]._Tipo_componente);
+                            newCell4.appendChild(newText4);
+
+                            var newCell4 = newRow.insertCell(3);
+
+                            var newText4 = document.createTextNode(data[ele]._Precio_componente);
+                            newCell4.appendChild(newText4);
+
+                            var btnFORZAR = document.createElement("img");
+                            //btnmodifica.type = "button";
+
+                            btnFORZAR.setAttribute("src", data[ele]._Foto1_componente + data[ele]._Foto2_componente);
+                            btnFORZAR.setAttribute("style", "width:25px;height:25px;cursor: pointer;");
+                            btnFORZAR.setAttribute("onclick", "modifica('" + data[ele]._Id_componente + "')");
+                            btnFORZAR.id = 'botonmod' + data[ele]._Id_componente;
+                            btnFORZAR.value = "Presióname";
+
+                            var newCell10 = newRow.insertCell(4);
+
+                            newCell10.appendChild(btnFORZAR);
+
+                            var btnAgregar = document.createElement("input");
+
+
+                            btnAgregar.setAttribute("type", "button");
+                            btnAgregar.setAttribute("value", "Agregar");
+                            btnAgregar.setAttribute("onclick", "Agregarcomponente('" + data[ele]._Id_componente + "')");
+                            btnAgregar.id = 'botonmod' + data[ele]._Id_componente;
+
+
+                            var newCell12 = newRow.insertCell(5);
+
+                            newCell12.appendChild(btnAgregar);
+                        }
+                    }
+                    else {
+                        alert("error");
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+        function Agregarcomponente(_Id_componente) {
+
+            var persona = new Object();
+            persona.identificacion = '0';
+            persona._Id_componente = _Id_componente;
+            persona._Id_modulo = localStorage.getItem("idguardado");
+            persona.cantidad = 1;
+            persona.op = "insertarcomponenteamodulo";
+            var tabla;
+
+            $.ajax({
+                url: '/api/Modulo',
+
+                type: 'POST',
+                dataType: 'json',
+                data: persona,
+                success: function (data, textStatus, xhr) {
+                    alert("Componente agregado al modulo");
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(xhr);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

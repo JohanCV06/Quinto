@@ -1,0 +1,43 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+    var Dado1, Dado2, Dado3;
+    alert("Lanzando dados");
+function numeroAleatorio(min,max) {
+	var Dado1 = Math.round(Math.random() * (max-min)+min);
+    var Dado2 = Math.round(Math.random() * (max-min)+min);
+    var Dado3 = Math.round(Math.random() * (max-min)+min);
+    document.write("El resultado de sus dados fue: <br>");
+    document.write(Dado1+" el primer dado <br>");
+    document.write(Dado2+" el segundo dado <br>");
+    document.write(Dado3+" el tercer dado <br>");
+	
+}
+numeroAleatorio(1,6);
+    
+    if ((Dado1 == 6) && (Dado2 == 6) && (Dado3 == 6)){
+        document.write("Tu tiro fue PERFECTO");
+    }
+    
+        if ((Dado1 == 6) && (Dado2 == 6) && (Dado3 != 6) || (Dado3 == 6) && (Dado2 == 6) && (Dado1 != 6) || (Dado1 == 6) && (Dado3 == 6) && (Dado2 != 6) ){cccc
+            document.write("Tu tiro fue MUY BUENO");
+    }
+        if ((Dado1 == 6) && (Dado2 != 6) && (Dado3 != 6) || (Dado3 == 6) && (Dado1!=6) && (Dado2!=6) || (Dado2==6) && (Dado1!=6) && (Dado3!=6)){
+            
+            document.write("Tu tiro fue REGULAR");
+    }
+        if((Dado1 != 6) && (Dado2 != 6) && (Dado3 != 6)){
+        document.write("Tu tiro fue HORRIBLE");
+        }
+        
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

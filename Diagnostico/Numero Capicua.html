@@ -1,0 +1,28 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+    var Centena, Decena, Unidad;
+    
+	var NumeroCapicua =parseInt(prompt('Ingrese un numero'));
+    
+    Centena= Math.floor(NumeroCapicua/100);
+    Decena= Math.floor((NumeroCapicua%100)/10);
+    Unidad= Math.floor((NumeroCapicua%100)%10);
+    
+    if(Centena==Unidad){
+        document.write(+NumeroCapicua+' Es un numero Capicua');
+    }
+    else
+        document.write(+NumeroCapicua+' NO es un numero Capicua');
+    
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

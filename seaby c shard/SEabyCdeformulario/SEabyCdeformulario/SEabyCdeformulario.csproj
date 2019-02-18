@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53138057-DEB2-45DA-99FD-940BCC4AA06D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEabyCdeformulario</RootNamespace>
+    <AssemblyName>SEabyCdeformulario</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Diagnostico\" />
+    <Folder Include="Views\Enfermedad\" />
+    <Folder Include="Views\Estudio\" />
+    <Folder Include="Views\Institucion\" />
+    <Folder Include="Views\Medico\" />
+    <Folder Include="Views\Paciente\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Controllers\DiagnosticoController.cs" />
+    <Compile Include="Controllers\EnfermedadController.cs" />
+    <Compile Include="Controllers\EstudioController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstitucionController.cs" />
+    <Compile Include="Controllers\MedicoController.cs" />
+    <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Diagnostico.cs" />
+    <Compile Include="Enfermedad.cs" />
+    <Compile Include="Estudio.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Institucion.cs" />
+    <Compile Include="Medico.cs" />
+    <Compile Include="Paciente.cs" />
+    <Compile Include="Paciente_Enfermedad.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Formularios\analisis.html" />
+    <Content Include="Formularios\buscador.html" />
+    <Content Include="Formularios\css\animate.min.css" />
+    <Content Include="Formularios\css\bootstrap.css" />
+    <Content Include="Formularios\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="Formularios\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Formularios\css\bootstrap\bootstrap.css" />
+    <Content Include="Formularios\css\font-awesome.min.css" />
+    <Content Include="Formularios\css\jquery-ui.css" />
+    <Content Include="Formularios\css\linearicons.css" />
+    <Content Include="Formularios\css\magnific-popup.css" />
+    <Content Include="Formularios\css\main.css" />
+    <Content Include="Formularios\css\main1.css" />
+    <Content Include="Formularios\css\mainanalisis.css" />
+    <Content Include="Formularios\css\mainanalisis2.css" />
+    <Content Include="Formularios\css\nice-select.css" />
+    <Content Include="Formularios\css\owl.carousel.css" />
+    <Content Include="Formularios\css\style.css" />
+    <Content Include="Formularios\css\style1.css" />
+    <Content Include="Formularios\css\stylepop.css" />
+    <Content Include="Formularios\diagnostico.html" />
+    <Content Include="Formularios\Enfermedad.html" />
+    <Content Include="Formularios\fonts\fontawesome-webfont.svg" />
+    <Content Include="Formularios\fonts\Linearicons-Free.svg" />
+    <Content Include="Formularios\img\%281%29 WhatsApp.html" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\88179f049c0d1d26c823d2954ecb54a7_a_e1681-40.png" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\88179f049c0d1d26c823d2954ecb54a7_a_e2103-40.png" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\cssm_e0c1b7638387d2e81ac29e2b9f8578a6.css" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\style_f8c40d12edbd6fe7b2cd055344892b0e.css" />
+    <Content Include="Formularios\img\112165.jpg" />
+    <Content Include="Formularios\img\123456789.jpg" />
+    <Content Include="Formularios\img\784.jpg" />
+    <Content Include="Formularios\img\about\about-img.jpg" />
+    <Content Include="Formularios\img\about\play.png" />
+    <Content Include="Formularios\img\about\video-bg.png" />
+    <Content Include="Formularios\img\b1.jpg" />
+    <Content Include="Formularios\img\b2.jpg" />
+    <Content Include="Formularios\img\b3.jpg" />
+    <Content Include="Formularios\img\blanco.jpg" />
+    <Content Include="Formularios\img\department\a1.jpg" />
+    <Content Include="Formularios\img\elements\a.jpg" />
+    <Content Include="Formularios\img\elements\a2.jpg" />
+    <Content Include="Formularios\img\elements\d.jpg" />
+    <Content Include="Formularios\img\elements\disabled-check.png" />
+    <Content Include="Formularios\img\elements\disabled-radio.png" />
+    <Content Include="Formularios\img\elements\f1.jpg" />
+    <Content Include="Formularios\img\elements\f2.jpg" />
+    <Content Include="Formularios\img\elements\f3.jpg" />
+    <Content Include="Formularios\img\elements\f4.jpg" />
+    <Content Include="Formularios\img\elements\f5.jpg" />
+    <Content Include="Formularios\img\elements\f6.jpg" />
+    <Content Include="Formularios\img\elements\f7.jpg" />
+    <Content Include="Formularios\img\elements\f8.jpg" />
+    <Content Include="Formularios\img\elements\g1.jpg" />
+    <Content Include="Formularios\img\elements\g2.jpg" />
+    <Content Include="Formularios\img\elements\g3.jpg" />
+    <Content Include="Formularios\img\elements\g4.jpg" />
+    <Content Include="Formularios\img\elements\g5.jpg" />
+    <Content Include="Formularios\img\elements\g6.jpg" />
+    <Content Include="Formularios\img\elements\g7.jpg" />
+    <Content Include="Formularios\img\elements\g8.jpg" />
+    <Content Include="Formularios\img\elements\primary-check.png" />
+    <Content Include="Formularios\img\elements\primary-radio.png" />
+    <Content Include="Formularios\img\elements\success-check.png" />
+    <Content Include="Formularios\img\elements\success-radio.png" />
+    <Content Include="Formularios\img\elements\user1.png" />
+    <Content Include="Formularios\img\elements\user2.png" />
+    <Content Include="Formularios\img\feedback-bg.jpg" />
+    <Content Include="Formularios\img\grafico11.jpg" />
+    <Content Include="Formularios\img\grafico2.png" />
+    <Content Include="Formularios\img\grafico3.png" />
+    <Content Include="Formularios\img\hero-bg.jpg" />
+    <Content Include="Formularios\img\hero-bg123.jpg" />
+    <Content Include="Formularios\img\logo.png" />
+    <Content Include="Formularios\img\logoseaby.png" />
+    <Content Include="Formularios\img\play-btn.png" />
+    <Content Include="Formularios\img\s2.jpg" />
+    <Content Include="Formularios\img\s3.jpg" />
+    <Content Include="Formularios\img\seaby.png" />
+    <Content Include="Formularios\img\t1.jpg" />
+    <Content Include="Formularios\img\t2.jpg" />
+    <Content Include="Formularios\img\t3.jpg" />
+    <Content Include="Formularios\img\t4.jpg" />
+    <Content Include="Formularios\img\texto.png" />
+    <Content Include="Formularios\img\top-banner.jpg" />
+    <Content Include="Formularios\img\user.png" />
+    <Content Include="Formularios\img\video-bg.jpg" />
+    <Content Include="Formularios\index.html" />
+    <Content Include="Formularios\index123.html" />
+    <Content Include="Formularios\Institucion.html" />
+    <Content Include="Formularios\jquery-3.2.1.min.js" />
+    <Content Include="Formularios\js\easing.min.js" />
+    <Content Include="Formularios\js\hoverIntent.js" />
+    <Content Include="Formularios\js\index.js" />
+    <Content Include="Formularios\js\indexpop.js" />
+    <Content Include="Formularios\js\jquery-ui.js" />
+    <Content Include="Formularios\js\jquery.ajaxchimp.min.js" />
+    <Content Include="Formularios\js\jquery.magnific-popup.min.js" />
+    <Content Include="Formularios\js\jquery.nice-select.min.js" />
+    <Content Include="Formularios\js\jquery.tabs.min.js" />
+    <Content Include="Formularios\js\mail-script.js" />
+    <Content Include="Formularios\js\main.js" />
+    <Content Include="Formularios\js\owl.carousel.min.js" />
+    <Content Include="Formularios\js\popper.min.js" />
+    <Content Include="Formularios\js\superfish.min.js" />
+    <Content Include="Formularios\js\vendor\bootstrap.min.js" />
+    <Content Include="Formularios\js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="Formularios\license.txt" />
+    <Content Include="Formularios\Medical - Doc\css\font-awesome.min.css" />
+    <Content Include="Formularios\Medical - Doc\css\main.css" />
+    <Content Include="Formularios\Medical - Doc\css\normalize.min.css" />
+    <Content Include="Formularios\Medical - Doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Formularios\Medical - Doc\img\logo.png" />
+    <Content Include="Formularios\Medical - Doc\index.html" />
+    <Content Include="Formularios\Medical - Doc\js\custom.js" />
+    <Content Include="Formularios\Medical - Doc\js\jquery-1.11.0.min.js" />
+    <Content Include="Formularios\Medical - Doc\js\jquery.nav.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="Formularios\Medico.html" />
+    <Content Include="Formularios\Paciente - copia.html" />
+    <Content Include="Formularios\Paciente.html" />
+    <Content Include="Formularios\README.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Formularios\index.pug" />
+    <Content Include="Formularios\scss\.DS_Store" />
+    <Content Include="Formularios\scss\bootstrap.scss" />
+    <Content Include="Formularios\scss\bootstrap\.DS_Store" />
+    <Content Include="Formularios\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Formularios\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Formularios\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Formularios\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Formularios\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Formularios\scss\bootstrap\_alert.scss" />
+    <Content Include="Formularios\scss\bootstrap\_badge.scss" />
+    <Content Include="Formularios\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Formularios\scss\bootstrap\_button-group.scss" />
+    <Content Include="Formularios\scss\bootstrap\_buttons.scss" />
+    <Content Include="Formularios\scss\bootstrap\_card.scss" />
+    <Content Include="Formularios\scss\bootstrap\_carousel.scss" />
+    <Content Include="Formularios\scss\bootstrap\_close.scss" />
+    <Content Include="Formularios\scss\bootstrap\_code.scss" />
+    <Content Include="Formularios\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Formularios\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Formularios\scss\bootstrap\_forms.scss" />
+    <Content Include="Formularios\scss\bootstrap\_functions.scss" />
+    <Content Include="Formularios\scss\bootstrap\_grid.scss" />
+    <Content Include="Formularios\scss\bootstrap\_images.scss" />
+    <Content Include="Formularios\scss\bootstrap\_input-group.scss" />
+    <Content Include="Formularios\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Formularios\scss\bootstrap\_list-group.scss" />
+    <Content Include="Formularios\scss\bootstrap\_media.scss" />
+    <Content Include="Formularios\scss\bootstrap\_mixins.scss" />
+    <Content Include="Formularios\scss\bootstrap\_modal.scss" />
+    <Content Include="Formularios\scss\bootstrap\_nav.scss" />
+    <Content Include="Formularios\scss\bootstrap\_navbar.scss" />
+    <Content Include="Formularios\scss\bootstrap\_pagination.scss" />
+    <Content Include="Formularios\scss\bootstrap\_popover.scss" />
+    <Content Include="Formularios\scss\bootstrap\_print.scss" />
+    <Content Include="Formularios\scss\bootstrap\_progress.scss" />
+    <Content Include="Formularios\scss\bootstrap\_reboot.scss" />
+    <Content Include="Formularios\scss\bootstrap\_root.scss" />
+    <Content Include="Formularios\scss\bootstrap\_tables.scss" />
+    <Content Include="Formularios\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Formularios\scss\bootstrap\_transitions.scss" />
+    <Content Include="Formularios\scss\bootstrap\_type.scss" />
+    <Content Include="Formularios\scss\bootstrap\_utilities.scss" />
+    <Content Include="Formularios\scss\bootstrap\_variables.scss" />
+    <Content Include="Formularios\scss\main.scss" />
+    <Content Include="Formularios\scss\theme\.DS_Store" />
+    <Content Include="Formularios\scss\theme\_about.scss" />
+    <Content Include="Formularios\scss\theme\_blog.scss" />
+    <Content Include="Formularios\scss\theme\_contact.scss" />
+    <Content Include="Formularios\scss\theme\_dept.scss" />
+    <Content Include="Formularios\scss\theme\_elements.scss" />
+    <Content Include="Formularios\scss\theme\_flexbox.scss" />
+    <Content Include="Formularios\scss\theme\_footer.scss" />
+    <Content Include="Formularios\scss\theme\_header.scss" />
+    <Content Include="Formularios\scss\theme\_home.scss" />
+    <Content Include="Formularios\scss\theme\_mixins.scss" />
+    <Content Include="Formularios\scss\theme\_reset.scss" />
+    <Content Include="Formularios\scss\theme\_variables.scss" />
+    <Content Include="Formularios\Medical - Doc\.DS_Store" />
+    <Content Include="Formularios\Medical - Doc\css\.DS_Store" />
+    <Content Include="Formularios\Medical - Doc\fonts\.DS_Store" />
+    <Content Include="Formularios\Medical - Doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Formularios\Medical - Doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Formularios\Medical - Doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Formularios\Medical - Doc\fonts\FontAwesome.otf" />
+    <Content Include="Formularios\Medical - Doc\img\.DS_Store" />
+    <Content Include="Formularios\Medical - Doc\js\.DS_Store" />
+    <Content Include="Formularios\Medical - Doc\syntax-highlighter\.DS_Store" />
+    <Content Include="Formularios\less\style.less" />
+    <Content Include="Formularios\js\.DS_Store" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\app.594de73fa2e98b425eb2.js.descarga" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\app2.2895c6f9f2f5600b95d8.js.descarga" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\css" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\en.fa66d856bbdb4dcec395.js.descarga" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\es.0fb9eeacf7bf1a103f06.js.descarga" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%281%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2810%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2811%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2812%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2813%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2814%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2815%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2816%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2817%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%2818%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%282%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%283%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%284%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%285%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%286%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%287%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%288%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\pp%289%29" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\progress.a4f09278b9e5d9faf80755f1127d567d.js.descarga" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\svg.f282689ce3a2dcde0c3a.js.descarga" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\vendor1.4853869e7b408da0d376.js.descarga" />
+    <Content Include="Formularios\img\%281%29 WhatsApp_files\vendor2.030d3590e07b379cf716.js.descarga" />
+    <Content Include="Formularios\img\.DS_Store" />
+    <Content Include="Formularios\img\about\.DS_Store" />
+    <Content Include="Formularios\img\elements\.DS_Store" />
+    <Content Include="Formularios\fonts\fontawesome-webfont.eot" />
+    <Content Include="Formularios\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Formularios\fonts\fontawesome-webfont.woff" />
+    <Content Include="Formularios\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Formularios\fonts\FontAwesome.otf" />
+    <Content Include="Formularios\fonts\Linearicons-Free.eot" />
+    <Content Include="Formularios\fonts\Linearicons-Free.ttf" />
+    <Content Include="Formularios\fonts\Linearicons-Free.woff" />
+    <Content Include="Formularios\fonts\Linearicons-Free.woff2" />
+    <Content Include="Formularios\css\.DS_Store" />
+    <Content Include="Formularios\css\bootstrap.map" />
+    <Content Include="Formularios\css\main.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2209</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2209/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

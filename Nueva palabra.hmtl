@@ -1,0 +1,18 @@
+<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript" >
+function cambio(){
+	var nuevapalabra=document.getElementById('nepalabra').value;
+	document.getElementById('textaa').innerHTML=nuevapalabra;	
+	}
+</script>
+</head>
+<body>
+<label for="nepalabra"></label>
+<input type="text" name="nepalabra" id="nepalabra" />
+<input type="submit" name="boton" id="boton" value="Submit" onclick="cambio()" />
+<label for="textaa"></label>
+<textarea name="textaa" id="textaa" cols="45" rows="5"></textarea>
+</body>
+</html>

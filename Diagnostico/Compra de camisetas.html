@@ -1,0 +1,40 @@
+<doctype.html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+	var NumeroCamisetas =parseInt(prompt('Hola, bienvenido a nuestra tienda, las camisetas cuestan 2500 Colones cada una, ¿Cuantas camisetas desea comprar?'));
+    
+    var PrecioSinD = NumeroCamisetas*2500;
+
+	if (NumeroCamisetas > 1 && NumeroCamisetas <= 4){
+        var MontoDescuento= PrecioSinD*(12.5/100);
+       
+        
+	}
+	else
+        if (NumeroCamisetas > 5 && NumeroCamisetas <= 8){
+            var MontoDescuento= PrecioSinD*(20/100);
+        }
+    else
+        if (NumeroCamisetas > 8){
+            var MontoDescuento= PrecioSinD*(31.5/100);
+        }
+
+ var MontoTotal= PrecioSinD-MontoDescuento;
+    
+    document.write(+PrecioSinD+' Es el monto sin descuento <br>');
+    
+    document.write(MontoDescuento+ ' Es el monto del descuento <br>')
+    
+    document.write(+MontoTotal+ ' Es el monto total');
+		
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

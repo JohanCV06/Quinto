@@ -1,0 +1,21 @@
+{
+    "name": "CalculadoraKawaii",
+    "version": "0.0.1",
+    "description": "calcula",
+    "main": "server.js",
+    "author": "Johan Calvo",
+    "dependencies": {
+        "express": "~3.4.4",
+        "mongoose": "~4.0.3",
+        "multer": "~0.1.6",
+        "cors": "~2.8.4"
+    },
+    "devDependiences": {
+        "nodemon": "^1.11.0"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "license": "ISC"
+    
+}
